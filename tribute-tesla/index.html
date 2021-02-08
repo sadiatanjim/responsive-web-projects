@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+        <title>Nikola Tesla</title>
+        <style>
+            #main {
+                background-image: url('background.jpg');
+                background-repeat: no-repeat;
+                background-position: center;
+                background-attachment: fixed;
+                margin: 5% 10% 5% 10%;
+                display: flex;
+                width: 80%;
+                flex-direction: column;
+                align-items: center;
+                font-family: 'Ubuntu', sans-serif;
+                font-size: 24px;
+            }
+
+            @media (min-width: 1950px) {
+                #main{
+                    background-image: url('background-large.jpg');
+                }
+            } 
+
+
+            #title {
+                text-shadow: 1px 1px 4px gray;
+                font-family: 'Roboto Mono', monospace;
+                padding-bottom: 0px;
+                
+
+            }
+
+            #sub {
+                padding-top: 0px;
+                text-align: center;
+                opacity: 0.65;
+            }
+
+            #img-div {
+                
+            }
+            #image{
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 100%;  
+                box-shadow: 5px 5px 10px gray;  
+            }
+            #tribute-info {
+                max-width: 800px;
+                text-align: justify;
+                line-height: 32px;
+            }
+            #timeline {
+                line-height: 48px;
+
+            }
+            #img-caption {
+                text-align: center;
+                padding-top: 1%;
+                font-size: 16px;
+                text-shadow: 2px 2px 5px gray;
+            }
+
+        </style>
+    </head>
+    <body id="main">
+        <div>
+            <h1 id="title">Nikola Tesla</h1>
+            <h4 id = "sub">The man Ahead of his time.</h4>
+        </div>
+
+        <div id="img-div">
+            <figure>
+                <img id="image" src="tesla.jpg">
+                <figcaption id="img-caption">Fig: Nikola Tesla in his Laboratory</figcaption>
+            </figure>
+        </div>
+        <div id="tribute-info">
+            <p>Nikola Tesla accomplished more in his lifetime than many 
+                of us could ever hope to achieve in a 100 lifetimes.
+                Tesla held over 300 different patents, spanning several 
+                countries. From wireless technology to alternating current, 
+                electric motors, Radio, X-Rays, radar and laser technology…
+                the list goes on. 
+                <br><br>
+                Nikola Tesla’s work would go on to inspire thousands of inventors,
+                dreamers and engineers. To this very day, his inventions continue 
+                to shape life as we know it. You can’t help but wonder what the
+                world would have looked like today if Nikola Tesla would have been
+                able to finish his experiments with free energy and long range
+                wireless energy transfer.</p>
+        </div>
+        <div id = "timeline">
+            <p style="text-align:center;"><strong>Here's a timeline of Nikola Tesla's Life:</strong></p>
+            <ul>
+                <li><b>1859</b> - Nikola Tesla is born</li>
+                <li><b>1870</b> - Tesla's Brush with Death</li>
+                <li><b>1875</b> - Tesla Enrolls in College</li>
+                <li><b>1880</b> - Tesla Moves to Prague to Study Philosophy</li>
+                <li><b>1881</b> - Tesla Begins His Career As Chief Electrical Engineer</li>
+                <li><b>1882</b> - Tesla Goes to Work for Edison</li>
+                <li><b>1885</b> - Tesla Submits Some of his first Patents</li>
+                <li><b>1887</b> - Tesla Re-Imagines the Electric Motor</li>
+                <li><b>1890</b> - Tesla Begins His Work on Wireless Power Transmission</li>
+                <li><b>1891</b> - Tesla Patents the Tesla Coil</li>
+                <li><b>1943</b> - Tesla's Death</li>
+            </ul>            
+
+        </div>
+        <br>
+        <a href="https://en.wikipedia.org/wiki/Nikola_Tesla" id="tribute-link" target="_blank">
+            Click Here to Learn More about Tesla</a><br>
+        <a href='https://www.freepik.com/photos/background'>
+            Background photo created by rawpixel.com - www.freepik.com</a>
+    </body>
+</html>
+
+<!--
+
+* Font Change
+* Background Color Change
+* Use Flexbox on Items
+* Center the Picture
+* Center the figcaption
+* Make the picture responsive
+
+-->
