@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
+        <title>Developer Survey Form</title>
+        <style>
+            body {
+                background-image: url('background.jpg');
+                justify-content: center;
+                display:flex;
+                flex-direction: column;
+                align-items: center;
+                font-family: 'Anonymous Pro', monospace;
+                font-weight: 550;
+            }
+
+            @media (min-width: 1950px){
+                body {
+                    background-image: url('background-large.jpg');
+                    justify-content: center;
+                    display:flex;
+                    flex-direction: column;
+                    align-items: center;
+                    font-family: 'Anonymous Pro', monospace;
+                    font-weight: 550;       
+                }
+            }
+
+            .block{
+                display:block;
+                padding: 5px;
+            }
+
+            #survey-form {
+                max-width: 700px;
+                width: 90%;
+                border-radius: 5px;
+                padding: 20px;
+                background: rgba(32, 177, 192, 0.8)
+                               
+                
+            }
+
+            input[type=text], select {
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+
+            input[type=number] {
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+
+
+            input[type=email] {
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+
+            #comments {
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+                
+            }
+
+            input[type=submit] {
+                width: 100%;
+                background-color: #4BAE49;
+                color: white;
+                padding: 14px 20px;
+                margin: 8px 0;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+
+            input[type=submit]:hover {
+                background-color: #45a049;
+            }
+
+            #title, #description, a {
+                color: white;
+            }
+
+
+
+
+        </style>
+
+    </head>
+
+
+    <body>
+        <h1 id="title">Developer Survey Form</h1>
+        <p id="description">Thank you for participating in the survey.</p>
+
+        
+
+        <form id="survey-form" action="">
+
+            <div>
+                <label for="name" id="name-label"><strong>Name:</strong></label>
+                <input id="name" type="text" placeholder="Enter your name">
+
+                <label for="name" id="email-label"><strong>Email:</strong></label>
+                <input id="email" type="email" placeholder="Enter your email">
+
+                <label for="name" id="number-label"><strong>Age:</strong></label>
+                <input id="number" type="number" min="5" max="99" placeholder="Enter your age">
+            </div>
+            
+            
+            <div>
+                <label for="dropdown"><strong>What is your current role?</strong></label>
+                <select id = "dropdown">
+                    <option value="student">Student</option>
+                    <option value="freelancer">Freelancer</option>
+                    <option value="developer">Developer</option>
+                    <option value="hobbyist">Hobbyist</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div>
+                <p><strong>What is your primary code editor?</strong></p>
+                <label for="vscode" class="block">
+                    <input type="radio" name="editor" id="vscode">
+                    Visual Studio Code</label>
+                <label for="vim" class="block">
+                    <input type="radio" name="editor" id="vim">
+                    Vim</label>
+                <label for="pycharm" class="block">
+                    <input type="radio" name="editor" id="pycharm">
+                    PyCharm</label>
+                <label for="atom" class="block">
+                    <input type="radio" name="editor" id="atom">
+                    Atom</label>
+                <label for="other" class="block">
+                    <input type="radio" name="editor" id="other">
+                    Other</label>
+            </div>
+            
+            <div>
+                <p><strong>What fields are you interested in?</strong></p>
+                <label for="frontend" class="block">
+                    <input type="checkbox" value="frontend" id="frontend">
+                    Front-end Development</label>
+                <label for="backend" class="block">
+                    <input type="checkbox" value="backend" id="backend">
+                    Backend Development</label>
+                <label for="appdev" class="block">
+                    <input type="checkbox" value="appdev" id="appdev">
+                    App Development</label>
+                <label for="devops" class="block">
+                    <input type="checkbox" value="devops" id="devops">
+                    DevOps</label>
+                <label for="datascience" class="block">
+                    <input type="checkbox" value="datascience" id="datascience">
+                    Data Science</label>
+                <label for="others" class="block">
+                    <input type="checkbox" value = "other" id="other">
+                    Other</label>
+
+
+            </div>
+
+            <div>
+                <p><strong>Express your vision as a Software Engineer:</strong></p>
+                <textarea id="comments" placeholder="Enter your comment here" style="height: 150px"></textarea> 
+            </div>      
+            
+            <input type="submit" id="submit">
+            
+            
+
+        </form>
+
+        <br>
+        <a href="https://www.pexels.com/photo/black-and-gray-mining-rig-1148820/">
+            Background Photo by panumas nikhomkhai from Pexels</a>
+        
+    </body>
+</html>
+
+
+<!-- 
+
+To Do:
+
+1. Create Background -> Shade/Blur effect -> Fixed
+2. Change Fonts
+3. Form -> Background
+4. Form -> Flexbox
+5. Checkbox, Radio Buttons: Vertical
+6. Alignment: Left/Justified
+
+-->
