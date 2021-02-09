@@ -1,0 +1,233 @@
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+        <title>CSS Documentation</title>
+        <style>
+            ul {
+                list-style-type: none;
+                margin: 40px 0px 0px 0px;
+                padding: 0;
+                width: 25%;
+                background-color: #f1f1f1;
+                position: fixed;
+                height: 100%;
+                overflow: auto;
+                
+            }
+
+            li a {
+                display: block;
+                color: #000;
+                padding: 8px 16px;
+                text-decoration: none;
+            }
+
+            li a.active {
+                background-color: #4CAF50;
+                color: white;
+            }
+
+            li a:hover:not(.active) {
+                background-color: #555;
+                color: white;
+            }
+
+            #main-doc {
+                margin-left:25%;
+                padding: 10px 5%;
+                height:1000px;
+                background-color: white;
+                font-family: 'Roboto Slab', serif;
+                text-align: justify;
+            }
+
+            #headline {
+                position: fixed;
+                margin: 0px 0px 0px 10px;
+                padding: 0;
+            }
+
+            pre {
+                background-color: lightgray;
+                max-width: 600px;
+                border-radius: 5px;
+                padding-left: 10px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            #nav-bar {
+                font-family: 'Exo 2', sans-serif;
+            }
+
+            
+        </style>
+    </head>
+
+    <body>
+        <nav id="nav-bar">
+            <h1 id="headline">Python Documentation</h1>
+            <ul>
+                <li><a class="nav-link active" href=#Introduction >Introduction</a></li>
+                <li><a class="nav-link" href=#Variables_and_Data_types >Variables and Data Types</a></li>
+                <li><a class="nav-link" href=#Strings__Formatting_and_operation >Strings and Formatting Operations</a></li>
+                <li><a class="nav-link" href=#Iterables >Iterables</a></li>
+                <li><a class="nav-link" href=#Dictionaries >Dictionaries</a></li>
+            </ul>
+
+        </nav>
+
+        <main id="main-doc">
+            <section id="Introduction" class="main-section">
+                <h1>Introduction</h1>
+                <p>The famous “Hello World” program in Python</p>
+                <pre>
+                    <code>
+print("hello World")
+                    </code>
+                </pre>                    
+                <p>Yep! That’s all, One line of code. No need to include any library, declaring function or class.</p>
+            </section>
+            <section id="Variables_and_Data_types" class="main-section">
+                <h1>Variables and Data Types</h1>
+                <p>In Python, to declare a variable, you don’t specify the datatype of the variable as we do in 
+                    other languages e.g C, C++, Java, etc. You just declare and initialize it.</p>
+                <ol>
+                    <li>Numbers</li>
+                    <pre>
+                        <code>
+a = 3       # Integer  
+a = 2.345   # float/double  
+a = 1E3 # scientific notation,  equivalent to 10^3 = 1000.0  
+a = 1e3 # scientific notation(with small letter)  equivalent to 10^3 = 1000.0
+                        </code>
+                    </pre>
+                    Mathematical Operations can be done easily without having to worry about different datatype.
+                    <pre>
+                        <code>
+a = 3  
+b = 2.5  
+c = a + b   # c = 5.5  
+c = a * b   # c = 7.5  
+c = a / b   # c = 1.2
+                        </code>
+                    </pre>
+                    <li>Strings</li>
+                    <pre>
+                        <code>
+a = "Hello World"   # enclosed in double quotes  
+a = 'Hello World'   # enclosed in single quotes
+                        </code>
+                    </pre>
+                    <p>There is no difference between double quote string and single quote string. 
+                        More details on Strings in upcoming section in this post.</p>
+                    <li>Booleans</li>
+                    <pre>
+                        <code>
+a = True  
+a = False
+                        </code>
+                    </pre>
+                    <li>List, Tuple, Set</li>
+                    <pre>
+                        <code>
+a = [1, 2, 3]          # List  
+a = (1, 2, 3)          # Tuple, similar to List but immutable  
+a = {"a", "b", "c"}    # Set of unique items/objects
+                        </code>
+                    </pre>
+                    <p>
+                        List, Tuple and Set, all are iterable, 
+                        that means we can loop over these to get a specific item.<br>
+                        More details on iterables in upcoming section in this post.
+                    </p>
+                    <li>Dictionary</li>
+                    <pre>
+                        <code>
+a = {"name": "Monty", "age": 100}   # Key: Value pair, JSON like object
+                        </code>
+                    </pre>
+
+                </ol>
+
+            </section>
+
+            <section id="Strings__Formatting_and_operation" class="main-section">
+                <h1>String: Formatting and Operation</h1>
+                <p>Python uses C-style string formatting options, like “%s”, “%d”, etc.</p>
+                <pre>
+                    <code>
+"Hello %s" % ("World")  # "Hello World"  
+"%s is %d feet tall" % ("Tom", 6)   # "Tom is 6 feet tall"
+                    </code>
+                </pre>
+                <p>Recommended way is to use string.format()</p>
+                <pre>
+person = "Tom"
+age = 6
+"{} is {} feet tall".format(person, age)   # "Tom is 6 feet tall"
+                </pre>
+                <p>Further, you can pass placeholders i.e. keyword, number and other formatting options.<br>
+                    However, Python3.6 introduced another way to format strings, called fstring.
+                    Since then this is the most preferred way to format strings.</p>
+                <pre>
+                    <code>
+                        f'{person} is {age} feet tall'  # "Tom is 6 feet tall"
+                    </code>
+                </pre>
+                <p>As you can see, in fstring, you can directly pass the variables.
+                     this makes string formatting more concise and readable.</p>
+            </section>
+
+            <section id="Iterables" class="main-section">
+                <h1>Iterables (Lists, Tuple & Set)</h1>
+                <ol>
+                    <li>List</li>
+                    <p>Lists are similar to arrays. A list can contain any type of variable.</p>
+                    <pre>
+                        <code>
+a = [1, "Hello world", 2.34, False]     # List or mix datatype variables
+                        </code>
+                    </pre>
+                    <li>Set</li>
+                    <p>Set is an unordered collection of unique items</p>
+                    <pre>
+                        <code>
+a = set('abracadabra')      # a = {'a', 'r', 'b', 'c', 'd'}   unique letters in a  
+b = set('alacazam')         # b = {'z', 'l', 'c', 'a', 'm'}
+                        </code>
+                    </pre>
+                </ol>
+            </section>
+            <section id="Dictionaries" class="main-section">
+                <h1>Dictionaries</h1>
+                <pre>
+                    <code>
+a = {"name": "Monty", "age": 100}  
+a["name"]   # "Monty"  
+a["age"]    # 100
+                    </code>
+                </pre>
+                <p>This is how dictionaries are defined in python.</p>
+            </section>
+    
+            <p><i>This is a sample technical Documentation page. 
+                The content is courtesy of 
+                <a href="https://www.pyscoop.com/learn-python-in-10-minutes/">this Python Tutorial</a></i></p>
+            <br>
+            <br>
+        </main>
+    </body>
+
+    
+</html>
+
+
+<!--
+
+* We need five Li items (total)
+* Nav-bar: Responsive
+
+-->
