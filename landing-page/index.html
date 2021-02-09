@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Exo&display=swap" rel="stylesheet">
+        <title>Product Landing Page</title>
+        <style>
+            #nav-bar {
+                
+                overflow: hidden;
+                position: right;
+                width: 40%;
+                font-weight: 600;
+                font-size: 20px;
+                height: 50px;
+                
+                
+            }
+            #nav-bar a {
+                float: left;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 17px;
+                width: 33.33%;
+            }
+            #nav-bar a:hover {
+                background-color: #ddd;
+                color: black;
+                border-radius: 5px;
+                
+            }
+
+            #nav-bar a.active {
+                background-color: #4CAF50;
+                color: white;
+            }
+
+            body {
+                display:flex;
+                flex-direction:column;
+                width: 70%;
+                margin: 2% 15% 2% 15%;
+                background-image:url('background.png');
+                background-position:center;
+                background-attachment: fixed;
+                font-family: 'Exo', sans-serif;
+                font-weight: 500;
+
+            }
+
+            @media (min-width: 1200px) {
+                body {
+                    background-image:url('background-1080.jpg');
+                }
+            }
+
+            @media (min-width: 2500px) {
+                body {
+                    background-image:url('background-1440.jpg');
+                }
+            }
+
+            @media (min-width: 3800px) {
+                body {
+                    background-image:url('background-4k.jpg');
+                }
+            }
+            
+
+            header {
+                display: flex;
+                flex-direction: row;
+                position: fixed;
+                width: 70.55%;
+                top: 5px;
+                background-color: rgb(23, 23, 97);
+                border-radius: 5px;
+            }
+
+            #nav-bar {
+                display: flex;
+                margin: 0 0 0 auto;
+            }
+
+            #header-img {
+                height: 80px;
+                opacity: 0.85;
+            }
+
+            #features {
+                padding: 10px 0 10px 0;
+                display: flex;
+                flex-direction: column;
+                
+            }
+
+            #title {
+                color: white;
+                text-align: center;
+                margin-top: 100px;
+            }
+
+            
+            .feats {
+                width: 100%;
+                height: auto;
+                display: flex;
+                flex-direction: row;
+                background-color: rgb(255, 255, 255, 0.8);
+                border-radius: 5px;
+                margin: 10px 0 10px 0;
+                padding: 5px 5px 5px 5px;
+            }
+
+            .featlogo {
+                height: auto;
+                max-height: 120px;
+                width: 120px;
+            }
+
+            .logobox {
+                width: 180px;
+            }
+
+            
+
+            #video {
+                padding: 10px 0 10px 0;
+                
+            }
+
+            #video-frame {
+                margin: 30px 0 30px 0;
+                background-color: lightgray;
+                height: 350px;
+                width: 600px;
+                border-radius: 5px;
+                
+            }
+
+            #embed{
+                position:relative;
+                top: 5%;
+            }
+
+            #pricing {
+                padding: 10px 0 10px 0;
+                display: flex;
+                flex-direction: row;
+            }
+
+            .products {
+                background-color: rgb(255, 255, 255, 0.8);
+                width: 33.33%;
+                height: 400px;
+                margin: 0px 10px 0px 10px;
+                border-radius: 5px;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .products:hover {
+                background-color: rgb(255, 255, 255, 1);
+                width: 33.33%;
+                height: 400px;
+                margin: 0px 10px 0px 10px;
+                border-radius: 5px;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+            }
+
+            #form {
+                padding: 10px 0 10px 0;
+            }
+
+            .logo {
+                border-radius: 10px;
+            }
+
+            .prodname {
+                background-color: lightgray;
+                height: 50px;
+                padding-top: 20px;
+                border-radius: 5px;
+                font-weight: 600;
+                font-size: 25px;
+            }
+
+            .price {
+                font-weight: 600;
+                font-size: 22px;
+            }
+
+            .button {
+                border-radius: 10px;
+                background-color: dodgerblue;
+                width: 100px;
+                height: 50px;
+                color: white;
+                margin-top: 15px;
+            }
+
+            #submit {
+                background-color: orange;
+                color: darkblue;
+                border-radius: 10px;
+                height: 30px;
+                width: 90px;
+            }
+
+            #email {
+                height: 30px;
+                width: 200px;
+                border-radius: 5px;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <header id="header">
+            <img id="header-img" class="logo"
+            src="hawkeye-logo.png">
+            <nav id="nav-bar">
+                <a class="nav-link" href="#features">Features</a>
+                <a class="nav-link" href="#video">In Action</a>
+                <a class="nav-link" href="#pricing">Pricing</a>
+            </nav>
+        </header>
+
+        <div id="title">
+            <h1>HawkEye Semiconductors</h1>
+            <h4>Your Custom Semiconductor Solution</h4>
+        </div>
+
+        <div id="features">
+            <div id="feat1" class="feats">
+                <div class="logobox">
+                    <img src="cute-chip.png" class="featlogo">                    
+                </div>
+                <div>
+                    <p><strong>Premium Silicon</strong><br>
+                    We use hand-picked wafers for every single chip. 
+                    Our silicon is the best you can find with industry leading performance 
+                    numbers.</p>
+                </div>
+            </div>
+            
+            <div id="feat2" class="feats">
+                <div class="logobox">
+                    <img src="delivery.png" class="featlogo">                    
+                </div>
+                <div>
+                    <p><strong>Guaranteed Performance</strong><br>
+                        Our products meet with the RC-45 industry standard and 
+                        each chip goes through rigorous testing before coming out 
+                        of the assembly line.</p>
+                </div>
+            </div>
+
+            <div id="feat3" class="feats">
+                <div class="logobox">
+                    <img src="truck.png" class="featlogo">                    
+                </div>
+                <div>
+                    <p><strong>Fast, iterative Design</strong><br>
+                        Our design team follows a fast, 
+                        iterative design process to make sure that your product is 
+                        delivered on time and works flawlessly.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="video">
+            <center>
+                <div id="video-frame">
+                    <iframe id="embed" width="560" height="315" src="https://www.youtube.com/embed/yqp4LjwNk5o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </center>
+        </div>
+
+        <div id="pricing">
+            <div id="prod1" class="products">
+                <div class="prodname">Embedded System Design</div><br>
+                <div>
+                    <p>Design of a fully functional end-to-end 
+                        embedded system to cater to your custom requirements. 
+                    A fast and efficient solution to industry applications</p>
+                </div>
+                <div class="price">
+                    Price: 100$/chip
+                </div>
+                <p>Minimum Order Quantity: 10000</p>
+                <div>
+                    <button class="button">Select</button>
+                </div>
+            </div>
+            <div id="prod2" class="products">
+                <div class="prodname">Custom ASIC Design</div><br>
+                <div>
+                    <p>Design of a totally customized ASIC capable 
+                        of performing complex float-point-operations or 
+                        your custom scientific computation. </p>
+                </div>
+                <div class="price">
+                    Price: 500$/chip
+                </div>
+                <p>Minimum Order Quantity: 5000</p>
+                <div>
+                    <button class="button">Select</button>
+                </div>
+            </div>
+            <div id="prod3" class="products">
+                <div class="prodname">RISC-V Microprocessor</div><br>
+                <div>
+                    <p>Design a fully functional and RISC-V ISA compatible 
+                        computer with custom core layout/performance requirements. 
+                        These chips are capable of diverse applications.</p>
+                </div>
+                <div class="price">
+                    Price: 1000$/Chip
+                </div>
+                <p>Minimum Order Quantity: 1000</p>
+                <div>
+                    <button class="button">Select</button>
+                </div>
+            </div>
+        </div>
+
+        <p style="color:white; text-align:center">To get a Quotation, Leave your email: </p>
+
+        <form id="form" action="https://www.freecodecamp.com/email-submit">
+            <center>
+                <label><input id="email" type="email" placeholder="Enter your email"></label>
+                <input id="submit" type="submit">
+            </center>
+        </form>
+    </body>
+</html>
+
+<!--
+
+
+1. Create Top Title & Subtitle
+
+
+-->
